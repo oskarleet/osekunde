@@ -1,65 +1,89 @@
-import Image from "next/image";
+"use client";
+
+import { motion } from "framer-motion";
+import { ArrowRight, CheckCircle, Zap, Shield, Mail, Menu, X } from "lucide-react";
+import { useState } from "react";
+import Hero from "../components/Hero";
+import Features from "../components/Features";
+import Fleet from "../components/Fleet";
+import Footer from "../components/Footer";
 
 export default function Home() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const navLinks = [
+    { name: "O nas", href: "#about" },
+    { name: "Flota", href: "#fleet" },
+    { name: "Oferta", href: "#features" },
+    { name: "Kontakt", href: "#contact" },
+  ];
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.js file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+    <div className="min-h-screen bg-neutral flex flex-col overflow-x-hidden">
+      {/* Header Container */}
+      <div className="fixed top-0 left-0 right-0 z-50 flex flex-col">
+        {/* Announcement Bar */}
+        <div className="bg-slate-900 text-center py-2 px-4 shadow-sm">
+          <p className="font-semibold text-sm text-white">
+            ZADBAMY O POWROTY Z IMPREZ W OKUNINCE! ZAMÓW Z WYPRZEDZENIEM! Twój prywatny przewóz TAXI! <a href="tel:+48797877338" className="text-[#32CD32] hover:underline">+48 797 877 338</a>
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+        
+        {/* Navbar */}
+        <nav className="bg-primary/95 backdrop-blur-sm text-neutral w-full">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-16">
+            <a href="#home" className="flex-shrink-0 text-2xl font-extrabold tracking-wider font-[family-name:var(--font-montserrat)] antialiased bg-gradient-to-r from-white via-[#adff2f] to-[#32CD32] bg-clip-text text-transparent">
+              Stenbor
+            </a>
+            <div className="hidden md:block">
+              <div className="ml-10 flex items-baseline space-x-8">
+                {navLinks.map((link) => (
+                  <a key={link.name} href={link.href} className="hover:text-accent transition-colors px-3 py-2 rounded-md text-base md:text-sm font-medium">
+                    {link.name}
+                  </a>
+                ))}
+              </div>
+            </div>
+            <div className="md:hidden">
+              <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="p-3 -mr-3 text-neutral hover:text-accent focus:outline-none">
+                {isMenuOpen ? <X size={28} /> : <Menu size={28} />}
+              </button>
+            </div>
+          </div>
         </div>
+        
+        {/* Mobile menu */}
+        {isMenuOpen && (
+          <div className="md:hidden bg-primary pb-3 px-2 pt-2 space-y-1 sm:px-3">
+            {navLinks.map((link) => (
+              <a 
+                key={link.name} 
+                href={link.href} 
+                onClick={() => setIsMenuOpen(false)}
+                className="block px-4 py-3 rounded-md text-lg font-medium hover:text-accent hover:bg-primary/80 transition-colors"
+              >
+                {link.name}
+              </a>
+            ))}
+          </div>
+        )}
+      </nav>
+      </div>
+
+      <main>
+        {/* Hero Section */}
+        <Hero />
+
+        {/* Fleet & About Section */}
+        <Fleet />
+
+        {/* Features Section */}
+        <Features />
+
+        {/* Footer & Contact Section */}
       </main>
+      <Footer />
     </div>
   );
 }
