@@ -77,19 +77,19 @@ export default function Footer() {
             <MapPin className="w-6 h-6 text-[#32CD32]" />
             <span className="text-lg">Obszar działania: <strong className="text-white">Włodawa i okolice, Lubelszczyzna, cała Polska</strong></span>
           </div>
-          <a href="mailto:stenbortaxi@gmail.com" className="flex items-center gap-3 text-gray-400 hover:text-[#32CD32] transition-colors">
+          <a href="mailto:osekundetaxi@gmail.com" className="flex items-center gap-3 text-gray-400 hover:text-[#32CD32] transition-colors">
             <Mail className="w-6 h-6 text-[#32CD32]" />
-            <span className="text-lg">stenbortaxi@gmail.com</span>
+            <span className="text-lg">osekundetaxi@gmail.com</span>
           </a>
         </motion.div>
 
         {/* Bottom Footer & SEO */}
         <div className="w-full mt-12 pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4 text-base md:text-sm text-gray-500">
           <p className="font-medium text-[#32CD32]/80">
-            stenbor.pl - Twój sprawdzony przewoźnik we Włodawie
+            osekunde.pl - Twój sprawdzony przewoźnik we Włodawie
           </p>
           <p>
-            &copy; {new Date().getFullYear()} Stenbor. Wszelkie prawa zastrzeżone.
+            &copy; {new Date().getFullYear()} osekunde. Wszelkie prawa zastrzeżone.
           </p>
         </div>
       </div>

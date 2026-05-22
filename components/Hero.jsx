@@ -55,6 +55,14 @@ export default function Hero() {
         </svg>
       </div>
 
+      {/* Layer 5: Speed lines for motion effect */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
+        <div className="absolute top-[30%] left-0 w-48 h-[1px] bg-white/30 animate-speed-lines drop-shadow-[0_0_8px_rgba(255,255,255,0.8)]" style={{ animationDuration: '2s', animationDelay: '0s' }}></div>
+        <div className="absolute top-[45%] left-0 w-80 h-[2px] bg-[#32CD32]/50 animate-speed-lines drop-shadow-[0_0_12px_rgba(50,205,50,0.8)]" style={{ animationDuration: '1.5s', animationDelay: '1s' }}></div>
+        <div className="absolute top-[65%] left-0 w-32 h-[1px] bg-white/20 animate-speed-lines" style={{ animationDuration: '3s', animationDelay: '0.5s' }}></div>
+        <div className="absolute top-[85%] left-0 w-[400px] h-[3px] bg-[#32CD32]/40 animate-speed-lines drop-shadow-[0_0_15px_rgba(50,205,50,0.9)]" style={{ animationDuration: '1.2s', animationDelay: '1.5s' }}></div>
+      </div>
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center text-neutral flex flex-col items-center">
         <motion.h1 
           initial={{ opacity: 0, y: 50 }}
@@ -62,9 +70,9 @@ export default function Hero() {
           transition={{ duration: 0.8, ease: "easeOut" }}
           className="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 max-w-4xl text-white font-[family-name:var(--font-montserrat)] uppercase mt-16"
         >
-          Najlepszy tor wyznacza
+          O <span className="text-[#32CD32]" style={{ textShadow: "3px 3px 0px #001122, 6px 6px 0px rgba(0,17,34,0.5)" }}>SEKUNDĘ</span>
           <br />
-          <span className="text-[#32CD32]" style={{ textShadow: "3px 3px 0px #001122, 6px 6px 0px rgba(0,17,34,0.5)" }}>Stenbor</span>
+          SZYBSI NIŻ INNI
         </motion.h1>
         
         <motion.div 
@@ -109,17 +117,28 @@ export default function Hero() {
           transition={{ duration: 1.2, delay: 0.6, ease: [0.25, 0.1, 0.25, 1] }}
           className="w-full max-w-4xl mt-12 -mb-20 relative z-20"
         >
-          <div className="relative aspect-[16/9] w-full">
+          {/* Ground shadow ellipse */}
+          <motion.div 
+            animate={{ scale: [1, 0.95, 1], opacity: [0.8, 0.4, 0.8] }}
+            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1.8 }}
+            className="absolute bottom-[8%] left-[10%] right-[10%] h-[10%] bg-black blur-2xl rounded-[100%] z-0"
+          ></motion.div>
+          
+          <motion.div 
+            animate={{ y: [0, -12, 0] }}
+            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1.8 }}
+            className="relative aspect-[16/9] w-full z-10"
+          >
             <Image
               src="/bus-mockup.png"
-              alt="Bus Stenbor - komfortowy transport 8-osobowy"
+              alt="Bus osekunde - komfortowy transport 8-osobowy"
               fill
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 896px"
               quality={90}
-              className="object-contain"
+              className="object-contain drop-shadow-[0_0px_35px_rgba(50,205,50,0.15)]"
               priority
             />
-          </div>
+          </motion.div>
         </motion.div>
       </div>
     </section>

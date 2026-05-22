@@ -24,8 +24,29 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  title: "Stenbor - Taxi Włodawa | Przewóz Osób Włodawa-Okuninka | Transfery Lotniskowe | Bus 8 osób",
-  description: "Bezpieczny i komfortowy transport osób busem 8-osobowym we Włodawie. Obsługujemy wesela, wycieczki i transfery na lotniska. Sprawdź najlepszy tor ze Stenbor!",
+  metadataBase: new URL('https://osekunde.pl'),
+  title: "osekunde - Taxi Włodawa | Przewóz Osób Włodawa-Okuninka | Transfery Lotniskowe | Bus 8 osób",
+  description: "Bezpieczny i komfortowy transport osób busem 8-osobowym we Włodawie. Obsługujemy wesela, wycieczki i transfery na lotniska. Sprawdź najlepszy tor z osekunde!",
+  keywords: ["taxi włodawa", "osekunde", "osekunde taxi", "przewóz osób włodawa", "taxi okuninka", "bus 8 osób włodawa", "transfery lotniskowe włodawa", "wynajem busa włodawa"],
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    title: "osekunde - Taxi Włodawa | Przewóz Osób Włodawa-Okuninka",
+    description: "Bezpieczny i komfortowy transport osób busem 8-osobowym we Włodawie. Obsługujemy wesela, wycieczki i transfery na lotniska.",
+    url: 'https://osekunde.pl',
+    siteName: 'osekunde',
+    images: [
+      {
+        url: '/busprzod.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Bus osekunde - widok z przodu',
+      },
+    ],
+    locale: 'pl_PL',
+    type: 'website',
+  },
   icons: {
     icon: "/taxi.svg",
   },

@@ -80,15 +80,17 @@ export default function Fleet() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="md:col-span-8 aspect-[16/9] lg:aspect-[2/1] bg-white rounded-3xl overflow-hidden relative group shadow-sm border border-gray-100"
+              className="md:col-span-8 aspect-[16/9] lg:aspect-[2/1] bg-white/40 backdrop-blur-xl rounded-3xl relative group shadow-lg border border-white/60 p-3"
             >
-              <Image
-                src="/busprzod.jpg"
-                alt="Bus Stenbor - widok z przodu"
-                fill
-                sizes="(max-width: 768px) 100vw, 66vw"
-                className="object-cover transition-transform duration-700 group-hover:scale-105"
-              />
+              <div className="relative w-full h-full rounded-2xl overflow-hidden">
+                <Image
+                  src="/busprzod.jpg"
+                  alt="Bus osekunde - widok z przodu"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 66vw"
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+              </div>
             </motion.div>
 
             {/* Side photos */}
@@ -98,30 +100,34 @@ export default function Fleet() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.1 }}
-                className="flex-1 aspect-[4/3] md:aspect-auto bg-white rounded-3xl overflow-hidden relative group shadow-sm border border-gray-100"
+                className="flex-1 aspect-[4/3] md:aspect-auto bg-white/40 backdrop-blur-xl rounded-3xl relative group shadow-lg border border-white/60 p-3"
               >
-                <Image
-                  src="/buswnetrze.jpg"
-                  alt="Wnętrze busa Stenbor - wygodne fotele"
-                  fill
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
-                />
+                <div className="relative w-full h-full rounded-2xl overflow-hidden">
+                  <Image
+                    src="/buswnetrze.jpg"
+                    alt="Wnętrze busa osekunde - wygodne fotele"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                </div>
               </motion.div>
               <motion.div 
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.2 }}
-                className="flex-1 aspect-[4/3] md:aspect-auto bg-white rounded-3xl overflow-hidden relative group shadow-sm border border-gray-100"
+                className="flex-1 aspect-[4/3] md:aspect-auto bg-white/40 backdrop-blur-xl rounded-3xl relative group shadow-lg border border-white/60 p-3"
               >
-                <Image
-                  src="/busbagaznik.jpg"
-                  alt="Bagażnik busa Stenbor - duża przestrzeń"
-                  fill
-                  sizes="(max-width: 768px) 100vw, 33vw"
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
-                />
+                <div className="relative w-full h-full rounded-2xl overflow-hidden">
+                  <Image
+                    src="/busbagaznik.jpg"
+                    alt="Bagażnik busa osekunde - duża przestrzeń"
+                    fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                </div>
               </motion.div>
             </div>
           </div>
