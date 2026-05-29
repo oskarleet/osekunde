@@ -26,7 +26,7 @@ const montserrat = Montserrat({
 export const metadata = {
   metadataBase: new URL('https://osekunde.pl'),
   title: "osekunde - Taxi Włodawa | Przewóz Osób Włodawa-Okuninka | Transfery Lotniskowe | Bus 8 osób",
-  description: "Bezpieczny i komfortowy transport osób busem 8-osobowym we Włodawie. Obsługujemy wesela, wycieczki i transfery na lotniska. Sprawdź najlepszy tor z osekunde!",
+  description: "Bezpieczny i komfortowy transport osób busem 8-osobowym we Włodawie. Obsługujemy wesela, wycieczki i transfery na lotniska. Sprawdź najlepszy transport z osekunde!",
   keywords: ["taxi włodawa", "osekunde", "osekunde taxi", "przewóz osób włodawa", "taxi okuninka", "bus 8 osób włodawa", "transfery lotniskowe włodawa", "wynajem busa włodawa"],
   alternates: {
     canonical: '/',
