@@ -27,7 +27,17 @@ export const metadata = {
   metadataBase: new URL('https://osekunde.pl'),
   title: "osekunde - Taxi Włodawa | Przewóz Osób Włodawa-Okuninka | Transfery Lotniskowe | Bus 8 osób",
   description: "Bezpieczny i komfortowy transport osób busem 8-osobowym we Włodawie. Obsługujemy wesela, wycieczki i transfery na lotniska. Sprawdź najlepszy transport z osekunde!",
-  keywords: ["taxi włodawa", "osekunde", "osekunde taxi", "przewóz osób włodawa", "taxi okuninka", "bus 8 osób włodawa", "transfery lotniskowe włodawa", "wynajem busa włodawa"],
+  keywords: [
+    "taxi włodawa", "taxi wlodawa",
+    "osekunde", "osekunde taxi", "o sekunde",
+    "przewóz osób włodawa", "przewoz osob wlodawa",
+    "taxi okuninka", "bus okuninka",
+    "bus 8 osób włodawa", "bus 8 osob wlodawa",
+    "transfery lotniskowe włodawa", "transfery lotniskowe wlodawa",
+    "wynajem busa włodawa", "wynajem busa wlodawa",
+    "taxi lublin włodawa", "taxi lublin wlodawa",
+    "przewóz osób okuninka", "transport wlodawa",
+  ],
   alternates: {
     canonical: '/',
   },
