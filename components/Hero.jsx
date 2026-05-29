@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { Phone, MessageCircle } from "lucide-react";
-import Image from "next/image";
 
 export default function Hero() {
   return (
@@ -129,15 +128,17 @@ export default function Hero() {
             transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1.8 }}
             className="relative aspect-[16/9] w-full z-10"
           >
-            <Image
-              src="/bus-mockup.png"
-              alt="Bus osekunde - komfortowy transport 8-osobowy"
-              fill
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 896px"
-              quality={90}
-              className="object-contain drop-shadow-[0_0px_35px_rgba(50,205,50,0.15)]"
-              priority
-            />
+            <picture className="block w-full h-full">
+              <source srcSet="/bus-mockup.webp" type="image/webp" />
+              <img
+                src="/bus-mockup.png"
+                alt="Bus osekunde - komfortowy transport 8-osobowy"
+                className="w-full h-full object-contain drop-shadow-[0_0px_35px_rgba(50,205,50,0.15)]"
+                loading="eager"
+                fetchPriority="high"
+                decoding="async"
+              />
+            </picture>
           </motion.div>
         </motion.div>
       </div>
