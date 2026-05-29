@@ -8,6 +8,7 @@ import Hero from "../components/Hero";
 import Features from "../components/Features";
 import Fleet from "../components/Fleet";
 import Footer from "../components/Footer";
+import LaunchBanner from "../components/LaunchBanner";
 
 export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -30,6 +31,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-neutral flex flex-col overflow-x-hidden">
+      <LaunchBanner />
       {/* Header Container */}
       <div className="fixed top-0 left-0 right-0 z-50 flex flex-col">
         {/* Announcement Bar (Marquee) */}
