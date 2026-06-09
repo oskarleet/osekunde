@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { X, Calendar, Clock } from "lucide-react";
 
-const LAUNCH_DATE = new Date("2026-06-10T00:00:00");
+const LAUNCH_DATE = new Date("2026-06-20T00:00:00");
 const SESSION_KEY = "osekunde_launch_banner_dismissed";
 
 function useCountdown(target) {
@@ -93,7 +93,7 @@ export default function LaunchBanner() {
         <h2 className="launch-heading">Ruszamy już wkrótce!</h2>
         <p className="launch-sub">
           Nasze usługi będą dostępne od&nbsp;
-          <strong>10 czerwca 2026</strong>.
+          <strong>20 czerwca 2026</strong>.
           <br />
           Już teraz możesz się zapoznać z naszą ofertą!
         </p>
