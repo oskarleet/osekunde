@@ -1,36 +1,86 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🚐 osekunde.pl
 
-## Getting Started
+**Strona internetowa dla firmy transportowej osekunde** — komfortowy przewóz osób busem 8-osobowym we Włodawie i okolicach.
 
-First, run the development server:
+🌐 **Live:** [osekunde.pl](https://osekunde.pl)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+---
+
+## 📸 Podgląd
+
+![Hero section z animowanym busem i CTA](public/busprzod.jpg)
+
+## ⚡ Tech Stack
+
+| Technologia | Wersja | Zastosowanie |
+|-------------|--------|-------------|
+| [Next.js](https://nextjs.org) | 16 | Framework React z SSR i App Router |
+| [React](https://react.dev) | 19 | Biblioteka UI |
+| [Tailwind CSS](https://tailwindcss.com) | 4 | Utility-first CSS |
+| [Framer Motion](https://motion.dev) | 12 | Animacje i przejścia |
+| [Lucide React](https://lucide.dev) | 1.14 | Ikony SVG |
+
+## ✨ Funkcjonalności
+
+- **Responsywny one-page design** — w pełni dostosowany do urządzeń mobilnych z hamburger menu
+- **Animowany hero section** — parallax grid, speed lines, floating bus z cieniem
+- **Efekt spotlight** — radialny gradient podążający za kursorem
+- **Scrolling marquee** — pasek informacyjny z płynną animacją
+- **Launch countdown banner** — modal z odliczaniem do daty startu, dismissable per sesję
+- **Galeria floty** — bento grid z hover zoom na zdjęciach
+- **Sekcja oferty** — karty usług z animacjami wejścia (viewport-triggered)
+- **SEO** — Open Graph meta, robots.js, sitemap.js, semantyczny HTML, polskie keywords
+- **Security headers** — HSTS, X-Frame-Options, CSP-ready konfiguracja w `next.config.mjs`
+- **Optymalizacja obrazów** — WebP z PNG fallback, `<picture>` element, lazy/eager loading
+
+## 🏗️ Architektura
+
+```
+app/
+├── layout.js          # Root layout z fontami (Geist, Montserrat, Poppins) i metadanymi SEO
+├── page.js            # Strona główna — navbar, spotlight overlay, kompozycja sekcji
+├── globals.css        # Design tokens, animacje (speed-lines, marquee), launch banner styles
+├── robots.js          # Konfiguracja robots.txt
+└── sitemap.js         # Generowanie sitemap.xml
+
+components/
+├── Hero.jsx           # Sekcja hero — SVG grid, road lines, CTA, floating bus
+├── Fleet.jsx          # O nas + galeria floty (bento layout)
+├── Features.jsx       # Karty oferty + sekcja komfortu
+├── Footer.jsx         # Kontakt, metody płatności, dane firmy
+└── LaunchBanner.jsx   # Countdown modal z odliczaniem do startu
+
+scripts/
+└── compress-images.mjs  # Kompresja PNG → WebP + optymalizowany PNG (sharp)
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Uruchomienie lokalne
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```bash
+# Instalacja zależności
+npm install
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# Serwer deweloperski
+npm run dev
+```
 
-## Learn More
+Strona będzie dostępna pod [http://localhost:3000](http://localhost:3000).
 
-To learn more about Next.js, take a look at the following resources:
+## 📦 Build produkcyjny
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run build
+npm start
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🖼️ Optymalizacja obrazów
 
-## Deploy on Vercel
+Skrypt do kompresji głównego mockupu busa (wymaga `sharp`):
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+node scripts/compress-images.mjs
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📄 Licencja
+
+Wszelkie prawa zastrzeżone © 2026 osekunde
