@@ -20,7 +20,7 @@ Live version: [osekunde.pl](https://osekunde.pl)
 - **Fleet gallery:** Bento-grid layout with hover zoom on vehicle photos.
 - **Services section:** Service cards with viewport-triggered entrance animations.
 - **Production-ready SEO:** Open Graph metadata, dynamic sitemap generation, custom robots rules, and semantic HTML with Polish keywords.
-- **Enhanced security:** Custom headers in Next.js config including HSTS, X-Frame-Options, and CSP-ready configuration.
+- **Enhanced security:** Custom headers in Next.js config including HSTS, X-Frame-Options, and security headers.
 - **Image optimization:** WebP with PNG fallback via `<picture>` elements, plus lazy and eager loading strategies.
 
 ## Tech stack
