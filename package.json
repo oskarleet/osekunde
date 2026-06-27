@@ -1,7 +1,9 @@
 {
-  "name": "one-page-app",
+  "name": "osekunde",
   "version": "0.1.0",
   "private": true,
+  "description": "Professional passenger transport landing page for osekunde.pl",
+  "author": "Oskar Stenborowski",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

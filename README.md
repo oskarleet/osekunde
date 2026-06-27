@@ -1,86 +1,84 @@
-# 🚐 osekunde.pl
+# osekunde.pl
 
-**Strona internetowa dla firmy transportowej osekunde** — komfortowy przewóz osób busem 8-osobowym we Włodawie i okolicach.
+[![Next.js 16](https://img.shields.io/badge/Next.js-16-black?style=flat&logo=next.js&logoColor=white)](https://nextjs.org/)
+[![React 19](https://img.shields.io/badge/React-19-61DAFB?style=flat&logo=react&logoColor=black)](https://react.dev/)
+[![JavaScript](https://img.shields.io/badge/JavaScript-ES2022-F7DF1E?style=flat&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+[![Tailwind CSS 4](https://img.shields.io/badge/Tailwind_CSS-4-38B2AC?style=flat&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![License: Proprietary](https://img.shields.io/badge/License-Proprietary-red?style=flat)](LICENSE)
 
-🌐 **Live:** [osekunde.pl](https://osekunde.pl)
+Source code for the professional landing page of **osekunde** — a passenger transport company offering comfortable 8-seat minibus rides in Włodawa and the surrounding area.
 
----
+Live version: [osekunde.pl](https://osekunde.pl)
 
-## 📸 Podgląd
+## Key features
 
-![Hero section z animowanym busem i CTA](public/busprzod.jpg)
+- **Responsive one-page design:** Fully mobile-friendly layout with a hamburger navigation menu.
+- **Animated hero section:** Parallax grid, speed lines, and a floating bus with dynamic shadow.
+- **Spotlight effect:** Radial gradient that follows the cursor across the page.
+- **Scrolling marquee:** Information bar with smooth, continuous animation.
+- **Launch countdown banner:** Dismissable modal with a countdown to the go-live date, stored per session.
+- **Fleet gallery:** Bento-grid layout with hover zoom on vehicle photos.
+- **Services section:** Service cards with viewport-triggered entrance animations.
+- **Production-ready SEO:** Open Graph metadata, dynamic sitemap generation, custom robots rules, and semantic HTML with Polish keywords.
+- **Enhanced security:** Custom headers in Next.js config including HSTS, X-Frame-Options, and CSP-ready configuration.
+- **Image optimization:** WebP with PNG fallback via `<picture>` elements, plus lazy and eager loading strategies.
 
-## ⚡ Tech Stack
+## Tech stack
 
-| Technologia | Wersja | Zastosowanie |
-|-------------|--------|-------------|
-| [Next.js](https://nextjs.org) | 16 | Framework React z SSR i App Router |
-| [React](https://react.dev) | 19 | Biblioteka UI |
-| [Tailwind CSS](https://tailwindcss.com) | 4 | Utility-first CSS |
-| [Framer Motion](https://motion.dev) | 12 | Animacje i przejścia |
-| [Lucide React](https://lucide.dev) | 1.14 | Ikony SVG |
+- **Framework:** Next.js 16 (App Router)
+- **UI Library:** React 19 & JavaScript
+- **Styling:** Tailwind CSS v4
+- **Animations:** Framer Motion
+- **Icons:** Lucide React
 
-## ✨ Funkcjonalności
-
-- **Responsywny one-page design** — w pełni dostosowany do urządzeń mobilnych z hamburger menu
-- **Animowany hero section** — parallax grid, speed lines, floating bus z cieniem
-- **Efekt spotlight** — radialny gradient podążający za kursorem
-- **Scrolling marquee** — pasek informacyjny z płynną animacją
-- **Launch countdown banner** — modal z odliczaniem do daty startu, dismissable per sesję
-- **Galeria floty** — bento grid z hover zoom na zdjęciach
-- **Sekcja oferty** — karty usług z animacjami wejścia (viewport-triggered)
-- **SEO** — Open Graph meta, robots.js, sitemap.js, semantyczny HTML, polskie keywords
-- **Security headers** — HSTS, X-Frame-Options, CSP-ready konfiguracja w `next.config.mjs`
-- **Optymalizacja obrazów** — WebP z PNG fallback, `<picture>` element, lazy/eager loading
-
-## 🏗️ Architektura
+## Project structure
 
 ```
 app/
-├── layout.js          # Root layout z fontami (Geist, Montserrat, Poppins) i metadanymi SEO
-├── page.js            # Strona główna — navbar, spotlight overlay, kompozycja sekcji
-├── globals.css        # Design tokens, animacje (speed-lines, marquee), launch banner styles
-├── robots.js          # Konfiguracja robots.txt
-└── sitemap.js         # Generowanie sitemap.xml
+├── layout.js          # Root layout with fonts (Geist, Montserrat, Poppins) and SEO metadata
+├── page.js            # Main page — navbar, spotlight overlay, section composition
+├── globals.css        # Design tokens, animations (speed-lines, marquee), launch banner styles
+├── robots.js          # robots.txt configuration
+└── sitemap.js         # sitemap.xml generation
 
 components/
-├── Hero.jsx           # Sekcja hero — SVG grid, road lines, CTA, floating bus
-├── Fleet.jsx          # O nas + galeria floty (bento layout)
-├── Features.jsx       # Karty oferty + sekcja komfortu
-├── Footer.jsx         # Kontakt, metody płatności, dane firmy
-└── LaunchBanner.jsx   # Countdown modal z odliczaniem do startu
+├── Hero.jsx           # Hero section — SVG grid, road lines, CTA, floating bus
+├── Fleet.jsx          # About us + fleet gallery (bento layout)
+├── Features.jsx       # Service cards + comfort section
+├── Footer.jsx         # Contact, payment methods, company details
+└── LaunchBanner.jsx   # Countdown modal for launch date
 
 scripts/
-└── compress-images.mjs  # Kompresja PNG → WebP + optymalizowany PNG (sharp)
+└── compress-images.mjs  # PNG → WebP compression + optimized PNG (sharp)
 ```
 
-## 🚀 Uruchomienie lokalne
+## Local development
 
 ```bash
-# Instalacja zależności
+# Install dependencies
 npm install
 
-# Serwer deweloperski
+# Start the development server
 npm run dev
 ```
 
-Strona będzie dostępna pod [http://localhost:3000](http://localhost:3000).
+The site will be available at [http://localhost:3000](http://localhost:3000).
 
-## 📦 Build produkcyjny
+## Production build
 
 ```bash
 npm run build
 npm start
 ```
 
-## 🖼️ Optymalizacja obrazów
+## Image optimization
 
-Skrypt do kompresji głównego mockupu busa (wymaga `sharp`):
+Script for compressing the main bus mockup (requires `sharp`):
 
 ```bash
 node scripts/compress-images.mjs
 ```
 
-## 📄 Licencja
+## License
 
-Wszelkie prawa zastrzeżone © 2026 osekunde
+All rights reserved © 2026 Oskar Stenborowski
